@@ -8,7 +8,7 @@ from yahoo_fin import stock_info as si
 app = Flask(__name__)
 cors = CORS(app)
 
-@app.route('/stocks')
+@app.route('/')
 @cross_origin()
 def stocks():
     """
@@ -60,4 +60,4 @@ def stocks():
 
 if __name__ == '__main__':
 
-    app.run(debug=True)
+    app.run(debug=True, port=5000)
